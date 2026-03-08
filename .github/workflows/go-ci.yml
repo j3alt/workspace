@@ -1,0 +1,33 @@
+name: Go CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/go/**"
+      - "go.work"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/go/**"
+      - "go.work"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.work
+
+      - name: Build
+        run: go build ./...
+
+      - name: Vet
+        run: go vet ./...
+
+      - name: Test
+        run: go test ./...

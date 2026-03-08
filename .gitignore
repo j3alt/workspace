@@ -1,0 +1,54 @@
+# .NET
+[Bb]in/
+[Oo]bj/
+*.nupkg
+*.snupkg
+*.user
+*.suo
+*.cache
+*.dbmdl
+*.jfm
+project.lock.json
+TestResult.xml
+[Dd]ebug/
+[Rr]elease/
+BenchmarkDotNet.Artifacts/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# PowerShell
+*.ps1xml
+
+# IDE / Editors
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Infra
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.tfvars
+!*.tfvars.example
+
+# Misc
+*.log
+*.tmp
